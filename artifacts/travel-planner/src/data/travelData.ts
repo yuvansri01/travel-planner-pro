@@ -89,6 +89,26 @@ export const itineraries: Record<string, DayPlan[][]> = {
       { time: "Afternoon", activity: "Hot Springs & Spa", cost: 30 },
       { time: "Evening", activity: "Beach bonfire at Kuta", cost: 10 },
     ],
+    [
+      { time: "Morning", activity: "Snorkeling at Menjangan Island", cost: 40 },
+      { time: "Afternoon", activity: "Besakih Mother Temple Tour", cost: 15 },
+      { time: "Evening", activity: "Traditional Balinese massage", cost: 20 },
+    ],
+    [
+      { time: "Morning", activity: "Tirta Empul Holy Spring Temple", cost: 10 },
+      { time: "Afternoon", activity: "Kintamani Volcano Viewpoint", cost: 12 },
+      { time: "Evening", activity: "Night market in Ubud", cost: 15 },
+    ],
+    [
+      { time: "Morning", activity: "Surfing lesson at Kuta Beach", cost: 30 },
+      { time: "Afternoon", activity: "Waterbom Bali Water Park", cost: 35 },
+      { time: "Evening", activity: "Farewell seafood dinner", cost: 25 },
+    ],
+    [
+      { time: "Morning", activity: "Lempuyang Temple & Gates of Heaven", cost: 10 },
+      { time: "Afternoon", activity: "Sidemen Valley cycling tour", cost: 20 },
+      { time: "Evening", activity: "Rooftop bar at Seminyak", cost: 20 },
+    ],
   ],
   "paris": [
     [
@@ -101,6 +121,68 @@ export const itineraries: Record<string, DayPlan[][]> = {
       { time: "Afternoon", activity: "Shopping at Champs-Élysées", cost: 50 },
       { time: "Evening", activity: "Fine dining near the Eiffel Tower", cost: 80 },
     ],
+    [
+      { time: "Morning", activity: "Palace of Versailles day trip", cost: 20 },
+      { time: "Afternoon", activity: "Versailles Gardens walk", cost: 0 },
+      { time: "Evening", activity: "Wine & cheese tasting", cost: 35 },
+    ],
+    [
+      { time: "Morning", activity: "Musée d'Orsay (Impressionist art)", cost: 16 },
+      { time: "Afternoon", activity: "Luxembourg Gardens picnic", cost: 10 },
+      { time: "Evening", activity: "Moulin Rouge area stroll", cost: 0 },
+    ],
+    [
+      { time: "Morning", activity: "Notre-Dame Cathedral exterior", cost: 0 },
+      { time: "Afternoon", activity: "Île de la Cité & Sainte-Chapelle", cost: 12 },
+      { time: "Evening", activity: "Latin Quarter dinner", cost: 40 },
+    ],
+    [
+      { time: "Morning", activity: "Centre Pompidou modern art", cost: 15 },
+      { time: "Afternoon", activity: "Le Marais neighbourhood walk", cost: 0 },
+      { time: "Evening", activity: "Jazz club in Saint-Germain", cost: 25 },
+    ],
+    [
+      { time: "Morning", activity: "Cooking class: French pastries", cost: 60 },
+      { time: "Afternoon", activity: "Père Lachaise Cemetery", cost: 0 },
+      { time: "Evening", activity: "Farewell dinner at a brasserie", cost: 55 },
+    ],
+  ],
+  "kyoto": [
+    [
+      { time: "Morning", activity: "Fushimi Inari Shrine (1000 gates)", cost: 0 },
+      { time: "Afternoon", activity: "Nishiki Market food tasting", cost: 15 },
+      { time: "Evening", activity: "Gion district evening stroll", cost: 0 },
+    ],
+    [
+      { time: "Morning", activity: "Arashiyama Bamboo Grove", cost: 0 },
+      { time: "Afternoon", activity: "Tenryu-ji Zen Garden", cost: 10 },
+      { time: "Evening", activity: "Traditional Kaiseki dinner", cost: 50 },
+    ],
+    [
+      { time: "Morning", activity: "Kinkaku-ji Golden Pavilion", cost: 5 },
+      { time: "Afternoon", activity: "Ryoan-ji Rock Garden", cost: 6 },
+      { time: "Evening", activity: "Tea ceremony experience", cost: 30 },
+    ],
+    [
+      { time: "Morning", activity: "Nijo Castle tour", cost: 8 },
+      { time: "Afternoon", activity: "Philosopher's Path walk", cost: 0 },
+      { time: "Evening", activity: "Pontocho Alley dining", cost: 40 },
+    ],
+    [
+      { time: "Morning", activity: "Nara day trip – Todai-ji Temple", cost: 10 },
+      { time: "Afternoon", activity: "Feed wild deer in Nara Park", cost: 5 },
+      { time: "Evening", activity: "Return to Kyoto, ramen dinner", cost: 15 },
+    ],
+    [
+      { time: "Morning", activity: "Kurama Onsen mountain hike", cost: 10 },
+      { time: "Afternoon", activity: "Kibune Shrine visit", cost: 0 },
+      { time: "Evening", activity: "Riverside dining (Kawadoko)", cost: 45 },
+    ],
+    [
+      { time: "Morning", activity: "Sanjusangen-do Temple (1001 statues)", cost: 6 },
+      { time: "Afternoon", activity: "Kyoto Handicraft Center", cost: 0 },
+      { time: "Evening", activity: "Farewell sake tasting", cost: 20 },
+    ],
   ],
   "default": [
     [
@@ -112,6 +194,31 @@ export const itineraries: Record<string, DayPlan[][]> = {
       { time: "Morning", activity: "Day trip to nearby attraction", cost: 40 },
       { time: "Afternoon", activity: "Shopping at local market", cost: 25 },
       { time: "Evening", activity: "Street food tour", cost: 20 },
+    ],
+    [
+      { time: "Morning", activity: "Scenic viewpoint & photography", cost: 10 },
+      { time: "Afternoon", activity: "Cultural heritage site visit", cost: 15 },
+      { time: "Evening", activity: "Rooftop bar & city views", cost: 25 },
+    ],
+    [
+      { time: "Morning", activity: "Local breakfast & coffee tour", cost: 15 },
+      { time: "Afternoon", activity: "Nature park or botanical garden", cost: 10 },
+      { time: "Evening", activity: "Live music or cultural show", cost: 30 },
+    ],
+    [
+      { time: "Morning", activity: "Cycling or scooter city tour", cost: 20 },
+      { time: "Afternoon", activity: "Local cooking class", cost: 40 },
+      { time: "Evening", activity: "Night market visit", cost: 20 },
+    ],
+    [
+      { time: "Morning", activity: "Boat tour or river cruise", cost: 30 },
+      { time: "Afternoon", activity: "Artisan craft workshop", cost: 25 },
+      { time: "Evening", activity: "Sunset dinner with a view", cost: 40 },
+    ],
+    [
+      { time: "Morning", activity: "Spa & wellness morning", cost: 35 },
+      { time: "Afternoon", activity: "Final souvenir shopping", cost: 30 },
+      { time: "Evening", activity: "Farewell dinner at top restaurant", cost: 50 },
     ],
   ],
 };

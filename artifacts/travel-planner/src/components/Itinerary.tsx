@@ -15,8 +15,8 @@ const timeColors: Record<string, string> = {
 export default function Itinerary({ plans, destination, days }: ItineraryProps) {
   if (!destination || !plans.length) return null;
 
-  const numDays = Math.min(parseInt(days) || 1, plans.length);
-  const displayPlans = plans.slice(0, numDays);
+  const numDays = Math.max(1, parseInt(days) || 1);
+  const displayPlans = Array.from({ length: numDays }, (_, i) => plans[i % plans.length]);
 
   return (
     <section id="itinerary" className="py-5 bg-light">
