@@ -1,45 +1,65 @@
-# [Project name]
+# TravelSmart — Smart Web-Based Travel Planner
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A beginner-friendly college project travel planner built with React + Vite + Bootstrap. No backend or database required.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/travel-planner run dev` — run the travel planner (served at `/`)
 - `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Frontend: React 18 + Vite
+- Styling: Bootstrap 5 + React Bootstrap
+- Data: Local JSON/TypeScript data (no backend)
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/travel-planner/src/` — all React components and data
+- `artifacts/travel-planner/src/data/travelData.ts` — all local JSON data (destinations, hotels, itineraries, tips)
+- `artifacts/travel-planner/src/components/` — one file per component
 
-## Architecture decisions
+## File Structure
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+```
+src/
+  App.tsx                    ← main app (state & logic)
+  main.tsx                   ← entry point
+  index.css                  ← global styles
+  data/
+    travelData.ts            ← all local data (hotels, destinations, itineraries)
+  components/
+    Navbar.tsx
+    Hero.tsx
+    SearchForm.tsx
+    HotelCards.tsx
+    Itinerary.tsx
+    BudgetSummary.tsx
+    PopularDestinations.tsx
+    TravelTips.tsx
+    Footer.tsx
+```
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Homepage with hero section and stats
+- Destination search form (destination, budget, days)
+- Hotel recommendations with ratings, prices, amenities
+- Day-by-day travel itinerary planner
+- Budget summary with progress bar and breakdown
+- Popular destinations grid (clickable)
+- Travel tips section
+- Responsive footer
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Keep code beginner-friendly and simple
+- Use Bootstrap for styling (not Tailwind)
+- Local JSON data only — no backend or database
+- Simple folder structure with minimal files
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
-
-## Pointers
-
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- Bootstrap is imported in App.tsx (both CSS and JS bundle)
+- All data lives in `src/data/travelData.ts` — easy to extend
