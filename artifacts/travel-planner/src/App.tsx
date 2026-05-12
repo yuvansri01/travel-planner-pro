@@ -98,7 +98,7 @@ export default function App() {
 
       {searchedDest && (
         <>
-          <HotelCards hotels={hotelList} destination={searchedDest} />
+          <HotelCards hotels={hotelList} destination={searchedDest} user={user} onLogin={handleLogin} />
           <Itinerary plans={itineraryPlans} destination={searchedDest} days={days} />
           <BudgetSummary
             destination={searchedDest}
