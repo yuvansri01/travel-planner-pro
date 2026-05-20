@@ -5,6 +5,6 @@ import authRouter from "./auth";
 const router: IRouter = Router();
 
 router.use(healthRouter);
-router.use(authRouter);
+router.use("/auth", authRouter);
 
 export default router;
