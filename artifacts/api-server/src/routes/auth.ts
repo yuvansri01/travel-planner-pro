@@ -5,6 +5,8 @@ const router = Router();
 
 router.post("/signup", async (req, res) => {
   try {
+    console.log(req.body);
+
     const { email, password } = req.body;
 
     const user = await User.create({
@@ -12,16 +14,11 @@ router.post("/signup", async (req, res) => {
       password,
     });
 
-    res.status(201).json({
-      success: true,
-      user,
-    });
-  } catch (error) {
-    console.log(error);
-
+    res.json(user);
+  } catch (err) {
+    console.log(err);
     res.status(500).json({
-      success: false,
-      message: "Signup failed",
+      message: "Error",
     });
   }
 });
