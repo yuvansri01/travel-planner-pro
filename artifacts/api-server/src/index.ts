@@ -14,19 +14,16 @@ if (!MONGODB_URI) {
 mongoose
   .connect(MONGODB_URI)
   .then(() => {
-    console.log("MongoDB Connected Successfully");
+    console.log("MongoDB connected");
   })
   .catch((err) => {
-    console.error("MongoDB Connection Error:", err);
+    console.log(err);
   });
 
-const port = Number(process.env.PORT) || 3000;
+const PORT = process.env.PORT || 3000;
 
-app.listen(port, (err) => {
-  if (err) {
-    logger.error({ err }, "Error listening on port");
-    process.exit(1);
-  }
-
-  logger.info({ port }, "Server listening");
+app.listen(PORT, () => {
+  logger.info(`Server running on port ${PORT}`);
 });
+
+export default app;
