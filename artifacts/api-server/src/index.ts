@@ -1,19 +1,26 @@
 import app from "./app";
 import { logger } from "./lib/logger";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-const rawPort = process.env["PORT"];
+dotenv.config();
 
-if (!rawPort) {
-  throw new Error(
-    "PORT environment variable is required but was not provided.",
-  );
+const MONGODB_URI = process.env.MONGODB_URI;
+
+if (!MONGODB_URI) {
+  throw new Error("MONGODB_URI is missing in .env file");
 }
 
-const port = Number(rawPort);
+mongoose
+  .connect(MONGODB_URI)
+  .then(() => {
+    console.log("MongoDB Connected Successfully");
+  })
+  .catch((err) => {
+    console.error("MongoDB Connection Error:", err);
+  });
 
-if (Number.isNaN(port) || port <= 0) {
-  throw new Error(`Invalid PORT value: "${rawPort}"`);
-}
+const port = Number(process.env.PORT) || 3000;
 
 app.listen(port, (err) => {
   if (err) {
